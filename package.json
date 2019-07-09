@@ -1,0 +1,23 @@
+{
+  "name": "cityexplorerserver",
+  "version": "1.0.0",
+  "description": "Lab 06",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rttgg/lab-06-back-end.git"
+  },
+  "author": "peter and roman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rttgg/lab-06-back-end/issues"
+  },
+  "homepage": "https://github.com/rttgg/lab-06-back-end#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0"
+  }
+}
