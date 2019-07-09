@@ -36,7 +36,15 @@ app.get('/location', (request, response) => {
     response.status(500).send('Status 500: So sorry i broke')
   }
 })
-
+app.get('/weather', (request, response) => {
+  console.log(request.query.data);
+  try {
+    const weatherData = searchHourlyData();
+    response.send(weatherData);
+  } catch(e){
+    response.status(500).send('Status 500: So sorry i broke')
+  }
+})
 app.use('*', (request, response) => {
   response.send('you got to the wrong place');
 })
@@ -53,7 +61,25 @@ function searchToLatLng (locationName){
   return location;
 }
 
+// app.get('/weather') is a route
 
+
+function searchHourlyData () {
+  const darkskyData = require('./data/darksky.json');
+  let results = [];
+  console.log(darkskyData.daily.data);
+  for (let i = 0; i < darkskyData.daily.data.length; i++){
+    const weather = {
+      forecast: darkskyData.daily.data[0].summary,
+      time:  darkskyData.daily.data[0].time,
+    }
+    results.push(weather);
+  }
+  
+  return results;
+
+  
+}
 
 // Start the server
 app.listen(PORT, () => {
