@@ -8,6 +8,19 @@ Estimate of time needed to complete: 2hr
 
 Start time: 9:30am
 
-Finish time: _____
+Finish time: 11:30am
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2hrs
+
+
+
+Number and name of feature: Weather
+
+
+Estimate of time needed to complete: 2hr
+
+Start time: 11:30am
+
+Finish time: 
+
+Actual time needed to complete: 
